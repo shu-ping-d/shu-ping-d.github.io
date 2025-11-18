@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1; 
+    color: #444; 
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #0095f6;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00376b;
+}
+
+/* profile section */
+.profile-section.container {
+    display: flex;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: none;
+    align-items: stretch;
+}
+
+.profile-card {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.profile-banner {
+    height: 120px;
+    background-color: #c9c9c9;
+    background-image: url('../pics/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-photo-v2 {
+    width: 120px;
+    height: 120px;
+    margin: -60px auto 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff; 
+    box-shadow: 0 0 0 1px #ccc;
+}
+
+.profile-photo-v2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info-v2 {
+    padding: 0 20px 30px 20px;
+}
+
+.profile-info-v2 h1 {
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.profile-info-v2 .tagline {
+    font-size: 1em;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.profile-info-v2 .quote {
+    font-style: italic;
+    color: #555;
+    margin: 15px 0 30px 0;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.detailed-bio-section {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    max-width: 60%;
+    flex-grow: 1;
+    background-color: #d5cece; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detailed-bio-section p{
+    max-width: 80%;
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    border-radius: 50%; 
+    overflow: hidden;
+    border: 3px solid #ff007a;
+    padding: 4px; 
+    background-clip: content-box;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #262626;
+}
+
+.profile-info .tagline {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: #0095f6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.cv-button:hover {
+    background-color: #00376b;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #262626;
+}
+
+/* 導航連結群組 */
+.nav-links a {
+    margin-right: 20px;
+    color: #262626;
+    font-weight: 500;
+}
+
+/* 社交媒體圖示 */
+.social-icons a {
+    font-size: 1.3em;
+    margin-left: 15px;
+    color: #555; /* 圖示使用較柔和的顏色 */
+}
+
+.social-icons a:hover {
+    color: #0095f6; /* 滑鼠經過時變成主題藍色 */
+}
+
+
+/* 專案區塊 */
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #262626;
+}
+
+/* 網格佈局實現 Instagram 貼文牆效果 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 響應式 300px 卡片寬度 */
+    gap: 20px; /* 卡片之間的間距 */
+}
+
+/* 專案卡片樣式 */
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* 柔和的卡片陰影 */
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* 滑鼠經過時略微上浮 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #0095f6;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.tech-stack {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* 響應式設計：針對小螢幕（例如手機） */
+@media (max-width: 768px) {
+    /* 導航列調整 */
+    .nav-links {
+        display: none; /* 在手機上可以先隱藏導航連結 */
+    }
+
+    /* 個人簡介區變成上下堆疊 */
+    .profile-section {
+        display: flex;
+        align-items: flex-start;
+        padding: 50px 20px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 30px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: 
+            radial-gradient(circle at center, #fcebaf 0%, #fcebaf 90%, transparent 90.1%) no-repeat center center / 100% 100%, /* 內圈與背景同色 */
+            linear-gradient(45deg, #ffdc80, #fcaf45, #fd1d1d, #e1306c, #c13584, #833ab4, #405de6); /* 外圈彩虹漸變色 */
+        padding: 5px; /* 內外圈之間的間距，調整這裡可以控制環的寬度 */
+        box-shadow: 0 0 0 3px #fcebaf; /* 外層的白色邊框，與背景色相同製造內圈效果 */
+        position: relative; /* 為了讓圖片定位在中間 */
+    }
+
+    .profile-info h1 {
+        font-size: 2em;
+    }
+
+    /* 專案網格在手機上變成單列 */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -5,41 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>it's-luna</title>
+    <!-- link to fontawesome for inserting social media icons  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- link to css file -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="site-name">@LUNA.SHU-PING</div>
-        <div class="nav-links">
-            <a href="#about-me">About Me</a>
-            <a href="#projects">Projects</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://github.com/shu-ping-d" target="_blank">
-                <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
-                <i class="fab fa-linkedin"></i></a>
-            <a href="mailto:luna.work404@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i></a>
-        </div>
+        <a href="#about-me" class="logo">@LUNA.SHU-PING</a>
+        <ul class="nav-links">
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
+
+    <!-- About me section -->
     <section id="about-me" class="profile-section container">
-            
         <div class="profile-card">
-            
             <div class="profile-banner"></div>
-            
             <div class="profile-photo-v2">
                 <img src="./pics/me.JPG" alt="大頭貼">
             </div>
-
             <div class="profile-info-v2">
                 <h1>Luna</h1>
                 <p class="tagline">luna.work404@gmail.com</p>
                 <blockquote class="quote">
                     Struggling with winter in Manchester
                 </blockquote>
+                <a href="#contact" class="cta-button">Let's Connect</a>
             </div>
         </div>
         
@@ -51,5 +47,21 @@
 
     </section>
 
+    <!-- footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/shu-ping-d" target="_blank">
+                <i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                <i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                <i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:luna.work404@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/weather.js"></script>
 </body>
 </html>

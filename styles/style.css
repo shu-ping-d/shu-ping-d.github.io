@@ -2,13 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root{
+--dark-bg: #FDEDED;
+--darker-bg: #fae3e3;
+--accent: #EDFFF0;
+--accent-glow: rgba(215, 197, 197, 0.4);
+--text: #ffffff;
 }
 
 body {
-    background-color: #f1f1f1; 
-    color: #444; 
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--dark-bg); 
+    color: var(--text); 
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,14 +26,70 @@ body {
     padding: 20px;
 }
 
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10,10,10, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 a {
     text-decoration: none;
-    color: #0095f6;
+    color: var(--text);
     transition: color 0.3s;
 }
 
-a:hover {
-    color: #00376b;
+
+.logo{
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.logo:hover{
+    color: rgb(255, 218, 251);
+}
+
+.nav-weather-icon img {
+    width: 30px; 
+    height: 30px;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    margin-right: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    background: var(--accent);
+    content:'';
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* profile section */
@@ -110,6 +175,7 @@ a:hover {
 }
 
 .detailed-bio-section p{
+    color: black;
     max-width: 80%;
     background-color: #fff; 
     padding: 30px;
@@ -117,17 +183,6 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 0;
-}
-
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    margin-right: 50px;
-    border-radius: 50%; 
-    overflow: hidden;
-    border: 3px solid #ff007a;
-    padding: 4px; 
-    background-clip: content-box;
 }
 
 .profile-photo img {
@@ -165,30 +220,19 @@ a:hover {
     color: white;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
 .site-name {
     font-size: 1.5em;
     font-weight: bold;
     color: #262626;
 }
 
-/* 導航連結群組 */
-.nav-links a {
-    margin-right: 20px;
-    color: #262626;
-    font-weight: 500;
+.site-name-wrapper {
+    display: flex;         /* 啟用 Flexbox */
+    align-items: center;   /* 垂直置中對齊 */
+    gap: 10px;             /* 網站名稱和圖示之間的間距 */
 }
+
+
 
 /* 社交媒體圖示 */
 .social-icons a {
@@ -200,7 +244,6 @@ a:hover {
 .social-icons a:hover {
     color: #0095f6; /* 滑鼠經過時變成主題藍色 */
 }
-
 
 /* 專案區塊 */
 .projects-section h2 {
@@ -249,14 +292,11 @@ a:hover {
     font-style: italic;
 }
 
-/* 響應式設計：針對小螢幕（例如手機） */
 @media (max-width: 768px) {
-    /* 導航列調整 */
     .nav-links {
-        display: none; /* 在手機上可以先隱藏導航連結 */
+        display: none;
     }
 
-    /* 個人簡介區變成上下堆疊 */
     .profile-section {
         display: flex;
         align-items: flex-start;
@@ -274,7 +314,7 @@ a:hover {
         background: 
             radial-gradient(circle at center, #fcebaf 0%, #fcebaf 90%, transparent 90.1%) no-repeat center center / 100% 100%, /* 內圈與背景同色 */
             linear-gradient(45deg, #ffdc80, #fcaf45, #fd1d1d, #e1306c, #c13584, #833ab4, #405de6); /* 外圈彩虹漸變色 */
-        padding: 5px; /* 內外圈之間的間距，調整這裡可以控制環的寬度 */
+        padding: 5px; 
         box-shadow: 0 0 0 3px #fcebaf; /* 外層的白色邊框，與背景色相同製造內圈效果 */
         position: relative; /* 為了讓圖片定位在中間 */
     }
@@ -283,7 +323,6 @@ a:hover {
         font-size: 2em;
     }
 
-    /* 專案網格在手機上變成單列 */
     .projects-grid {
         grid-template-columns: 1fr;
     }

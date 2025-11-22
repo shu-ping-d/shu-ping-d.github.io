@@ -11,51 +11,104 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="#about-me" class="logo">@LUNA.SHU-PING</a>
-        <ul class="nav-links">
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <main>
+    <header>
+        <nav class="navbar">
+            <a href="#about-me" class="logo">@LUNA.SHU-PING</a>
+            <ul class="nav-links">
+                <!-- <li><a href="#about-me">About Me</a></li> -->
+                <!-- <li><a href="#skills">Skills</a></li> -->
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
 
-    <!-- About me section -->
     <section id="about-me" class="profile-section container">
         <div class="profile-card">
             <div class="profile-banner"></div>
-            <div class="profile-photo-v2">
+            <div class="profile-photo">
                 <img src="./pics/me.JPG" alt="大頭貼">
             </div>
-            <div class="profile-info-v2">
+            <div class="profile-info">
                 <h1>Luna</h1>
-                <p class="tagline">luna.work404@gmail.com</p>
+                <p class="email">luna.work404@gmail.com</p>
                 <blockquote class="quote">
-                    Struggling with winter in Manchester
+                    Struggling with winter in Manchester...
                 </blockquote>
-                <a href="#contact" class="cta-button">Let's Connect</a>
+                <span class="location-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="location-text">Manchester, UK</span>
+                </span>
             </div>
         </div>
         
         <div class="detailed-bio-section">
-            <p>Hello! I'm a Taiwanese postgraduate student specializing in Advanced Computer 
-                Science at the University of Manchester. 
-                Thrilled to connect with you!</p>
+            <div class="detailed-bios">
+                <p>Hello! I'm a Taiwanese postgraduate student specializing in Advanced Computer 
+                    Science at the University of Manchester.</p>
+                <p class="intro2">Thrilled to connect with you!</p>
+            </div>
         </div>
 
     </section>
 
-    <!-- footer -->
+    <section class="activities-section container">
+        <h2><span class="activity-icon">💻</span> Recent Coding Activities</h2>
+        
+        <div class="activities-grid">
+            
+            <div class="activity-card">
+                <div class="card-image">
+                    <img src="./pics/hackthon.jpg" alt="Hackathon 活動圖片">
+                </div>
+                <div class="card-content">
+                    <div class="tag-group">
+                        <span class="tag">Hackathon</span>
+                    </div>
+
+                    <h3>GreatUniHack 2025</h3>
+                    
+                    <div class="card-footer">
+                        <span class="date-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            Nov 2025
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity-card">
+                <div class="card-image grayscale">
+                    <img src="./pics/bny.jpg" alt="BNY 活動圖片">
+                </div>
+                <div class="card-content">
+                    <div class="tag-group">
+                        <span class="tag">Cyber-crime simulation</span>
+                        <span class="tag">AI Workshop</span>
+                    </div>
+
+                    <h3>BNY Manchester Hack</h3>
+
+                    <div class="card-footer">
+                        <span class="date-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            Nov 2025
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </main>
+
     <footer>
         <div class="social-icons">
             <a href="https://github.com/shu-ping-d" target="_blank">
                 <i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
                 <i class="fab fa-linkedin"></i></a>
-            <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
-                <i class="fab fa-whatsapp"></i></a>
             <a href="mailto:luna.work404@gmail.com" target="_blank">
                 <i class="fas fa-envelope"></i></a>
         </div>

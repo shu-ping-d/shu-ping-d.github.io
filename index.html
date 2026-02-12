@@ -1,120 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="icon" type="image/x-icon" href="./pics/me.JPG">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>it's-luna</title>
-    <!-- link to fontawesome for inserting social media icons  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- link to css file -->
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-    <main>
-    <header>
-        <nav class="navbar">
-            <a href="#about-me" class="logo">@LUNA.SHU-PING</a>
-            <ul class="nav-links">
-                <!-- <li><a href="#about-me">About Me</a></li> -->
-                <!-- <li><a href="#skills">Skills</a></li> -->
-                <!-- <li><a href="#projects">Projects</a></li> -->
-                <!-- <li><a href="#contact">Contact</a></li> -->
-            </ul>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>it's luna</title>
+    <link rel="icon" type="image/x-icon" href="./pics/me.JPG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <section id="about-me" class="profile-section container">
-        <div class="profile-card">
+    <!-- link to fontawesome for inserting social media icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- link to css file -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <div class="container header-inner">
+          <div class="header-left">
+            <div class="logo">Luna Tu</div>
+          </div>
+          <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="header-right">
+            <!-- reserved -->
+          </div>
+        </div>
+      </header>
+
+      <!-- AboutMe -->
+      <section id="about" class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker">Backend Engineer</p>
+            <h1>Hi, I'm Luna</h1>
+            <p class="hero-subtitle">
+              A Taiwanese postgraduate student specializing in Advanced Computer
+              Science at the University of Manchester, with experience in C#,
+              Python, SQL/NoSQL databases, and building scalable backend
+              systems.
+            </p>
+            <div class="hero-meta">
+              <span>📍 Manchester, UK</span>
+            </div>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View my projects</a>
+              <a class="btn ghost" href="#contact">Contact me</a>
+            </div>
+          </div>
+          <div class="profile-card">
             <div class="profile-banner"></div>
             <div class="profile-photo">
-                <img src="./pics/me.JPG" alt="大頭貼">
+              <img src="./pics/me.JPG" alt="大頭貼" />
             </div>
             <div class="profile-info">
-                <h1>Luna</h1>
-                <p class="email">luna.work404@gmail.com</p>
-                <blockquote class="quote">
-                    Struggling with winter in Manchester...
-                </blockquote>
-                <span class="location-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span class="location-text">Manchester, UK</span>
-                </span>
+              <p class="email">luna.work404@gmail.com</p>
+              <blockquote class="quote">
+                Struggling with winter in Manchester...
+              </blockquote>
             </div>
+          </div>
         </div>
-        
-        <div class="detailed-bio-section">
-            <div class="detailed-bios">
-                <p>Hello! I'm a Taiwanese postgraduate student specializing in Advanced Computer 
-                    Science at the University of Manchester.</p>
-                <p class="intro2">Thrilled to connect with you!</p>
-            </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Work Experience</h2>
+
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>Backend Engineer</h3>
+                <p class="card-subtitle">
+                  CMoney · C# (.NET 6), MongoDB, Redis, MSSQL
+                </p>
+              </div>
+              <div class="card-meta">
+                <span>Nov 2023 – Jul 2025</span>
+                <span>FinTech</span>
+              </div>
+            </header>
+            <p>
+              Engineered a stock bull and bear simulation profit microservice
+              using MongoDB, MSSQL, and Redis to process and calculate millions
+              of stock prediction records from 140,000 users.
+            </p>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>Backend Engineer</h3>
+                <p class="card-subtitle">
+                  OrangeDate · Python (Django), PostgreSQL, OpenAI API
+                </p>
+              </div>
+              <div class="card-meta">
+                <span>Apr 2025 – Nov 2025</span>
+                <span>Dating App</span>
+              </div>
+            </header>
+            <p>
+              Refactored the messaging module and implemented a photo-blurring
+              feature that helped boost user match rates and contributed to a
+              doubling of monthly revenue.
+            </p>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>Backend Engineer Intern</h3>
+                <p class="card-subtitle">
+                  ViewSonic · C++, Python, DynamoDB, PostgreSQL, AWS
+                </p>
+              </div>
+              <div class="card-meta">
+                <span>Jun 2022 – Jun 2023</span>
+                <span>EdTech / Virtual Learning</span>
+              </div>
+            </header>
+            <p>
+              Developed an application launcher for UNIVERSE, a virtual learning
+              platform enabling interaction between educators and students, and
+              used AWS S3 for data storage and implemented a Qt-based UI to
+              improve user experience.
+            </p>
+          </article>
         </div>
+      </section>
 
-    </section>
+      <!-- Projects -->
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <h2>Projects</h2>
 
-    <section class="activities-section container">
-        <h2><span class="activity-icon">💻</span> Recent Coding Activities</h2>
-        
-        <div class="activities-grid">
-            
-            <div class="activity-card">
-                <div class="card-image">
-                    <img src="./pics/hackthon.jpg" alt="Hackathon 活動圖片">
-                </div>
-                <div class="card-content">
-                    <div class="tag-group">
-                        <span class="tag">Hackathon</span>
-                    </div>
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>Group Buying System</h3>
+                <p class="card-subtitle">Python (Flask), MySQL</p>
+              </div>
+              <div class="card-meta">
+                <span>2022</span>
+              </div>
+            </header>
+            <p class="card-body">
+              A group-buying platform supporting user registration and login,
+              article posting with comments and likes, and event creation for
+              organizing group purchases.
+            </p>
+            <p class="card-links">
+              <a
+                href="https://github.com/LittleBri32/Group_System"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View source on GitHub
+              </a>
+            </p>
+          </article>
 
-                    <h3>GreatUniHack 2025</h3>
-                    
-                    <div class="card-footer">
-                        <span class="date-tag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                            Nov 2025
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="activity-card">
-                <div class="card-image grayscale">
-                    <img src="./pics/bny.jpg" alt="BNY 活動圖片">
-                </div>
-                <div class="card-content">
-                    <div class="tag-group">
-                        <span class="tag">Cyber-crime simulation</span>
-                        <span class="tag">AI Workshop</span>
-                    </div>
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>Celebrity Face Recognition System</h3>
+                <p class="card-subtitle">Python, Deep Learning, Web Crawler</p>
+              </div>
+              <div class="card-meta">
+                <span>2020</span>
+              </div>
+            </header>
+            <p class="card-body">
+              A facial recognition system that identifies celebrity faces using
+              a deep learning model and a custom dataset collected via web
+              crawling.
+            </p>
+          </article>
 
-                    <h3>BNY Manchester Hack</h3>
-
-                    <div class="card-footer">
-                        <span class="date-tag">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                            Nov 2025
-                        </span>
-                    </div>
-                </div>
-            </div>
-
+          <div class="card-action">
+            <a class="btn primary" href="https://github.com/shu-ping-d"
+              >View All Projects</a
+            >
+          </div>
         </div>
-    </section>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <div class="container">
+          <h2>Education</h2>
+
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>University of Manchester</h3>
+                <p class="card-subtitle">Master of Computer Science</p>
+              </div>
+              <div class="card-meta">
+                <span> 2025 – 2026</span>
+                <span>Manchester, UK</span>
+              </div>
+            </header>
+          </article>
+
+          <article class="card">
+            <header class="card-header">
+              <div>
+                <h3>National Chengchi University (NCCU)</h3>
+                <p class="card-subtitle">
+                  Bachelor <br />
+                  Major in Accounting<br />
+                  Minor in Computer Science
+                </p>
+              </div>
+              <div class="card-meta">
+                <span>2021 – 2023</span>
+                <span>Taipei, Taiwan</span>
+              </div>
+            </header>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div>
+              <h3>Backend</h3>
+              <ul>
+                <li>C# (.NET 6)</li>
+                <li>Python (Django, Flask)</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Databases</h3>
+              <ul>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>PostgreSQL</li>
+                <li>MSSQL</li>
+                <li>Amazon DynamoDB</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Cloud &amp; Tools</h3>
+              <ul>
+                <li>AWS S3, API Gateway</li>
+                <li>Qt</li>
+                <li>RESTful APIs</li>
+                <li>OpenAI API</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Languages</h3>
+              <ul>
+                <li>Chinese (Native)</li>
+                <li>English (Fluent)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <h2 class="contact-title">Contact Me</h2>
+          <p class="contact-subtitle">Feel free to reach out!</p>
+
+          <div class="contact-layout">
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon-circle">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3>My Location</h3>
+                  <p>Manchester, UK</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon-circle">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3>Email Address</h3>
+                  <p>
+                    <a href="mailto:luna.work404@gmail.com"
+                      >luna.work404@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              action="mailto:luna.work404@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="contact-field">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="contact-field">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="contact-field">
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary contact-submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="social-icons">
-            <a href="https://github.com/shu-ping-d" target="_blank">
-                <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
-                <i class="fab fa-linkedin"></i></a>
-            <a href="mailto:luna.work404@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i></a>
+      <div class="social-icons">
+        <a href="https://github.com/shu-ping-d" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/lunatu2000?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:luna.work404@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i
+        ></a>
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> Luna. All rights reserved.</p>
         </div>
+      </div>
     </footer>
 
     <!-- scripts -->
     <script src="./scripts/weather.js"></script>
-</body>
+  </body>
 </html>

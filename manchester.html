@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luna in Manchester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <nav class="nav">
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="life" class="section">
+        <div class="container life-hero">
+          <div class="life-hero-text">
+            <h1>Luna in Manchester</h1>
+            <p>
+              A little diary of cooking experiments, hackathons, and rainy walks
+              while studying and working in Manchester.
+            </p>
+          </div>
+          <div class="life-hero-photo">
+            <img src="./pics/background.jpg" alt="Manchester skyline" />
+          </div>
+        </div>
+      </section>
+
+      <section id="cooking" class="section section-alt">
+        <div class="container life-layout">
+          <div class="life-grid">
+            <h2>Cooking at Home</h2>
+            <div class="life-photos cooking-grid">
+              <figure class="life-photo-card">
+                <img src="./pics/cooking-01.jpeg" alt="Rice Balls" />
+                <figcaption>Rice Balls</figcaption>
+              </figure>
+              <figure class="life-photo-card">
+                <img src="./pics/cooking-02.jpeg" alt="Curry" />
+                <figcaption>Curry</figcaption>
+              </figure>
+              <figure class="life-photo-card">
+                <img src="./pics/cooking-03.jpeg" alt="Beef Noodles" />
+                <figcaption>Beef Noodles</figcaption>
+              </figure>
+              <figure class="life-photo-card">
+                <img
+                  src="./pics/cooking-04.png"
+                  alt="Taiwanese Fried Chicken"
+                />
+                <figcaption>Taiwanese Fried Chicken</figcaption>
+              </figure>
+              <figure class="life-photo-card">
+                <img src="./pics/cooking-05.jpeg" alt="Cola Pork Chop" />
+                <figcaption>Cola Pork Chop</figcaption>
+              </figure>
+              <figure class="life-photo-card">
+                <img src="./pics/cooking-06.jpeg" alt="Braised Prok Rice" />
+                <figcaption>Braised Prok Rice</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <aside class="weather-panel">
+            <h2>Manchester Weather</h2>
+            <div id="current-weather" class="weather-today">
+              <!-- JS 會填入 -->
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Activities -->
+      <section id="activities" class="section">
+        <div class="container">
+          <h2>Activities & Events</h2>
+          <p class="life-intro">
+            Hackathons, company visits, and events that make Manchester feel
+            like home.
+          </p>
+
+          <div class="activities-grid">
+            <article class="activity-card">
+              <div class="card-image">
+                <img src="./pics/hackathon.jpg" alt="Hackathon" />
+              </div>
+              <div class="card-content">
+                <div class="tag-group">
+                  <span class="tag">Hackathon</span>
+                  <span class="tag">Teamwork</span>
+                </div>
+                <h3>GreatUniHack Weekend</h3>
+                <p>
+                  A 24-hour hackathon in Manchester where we built a small
+                  project, met new friends, and survived on coffee and snacks.
+                </p>
+              </div>
+            </article>
+
+            <article class="activity-card">
+              <div class="card-image">
+                <img src="./pics/bny.jpg" alt="Company visit" />
+              </div>
+              <div class="card-content">
+                <div class="tag-group">
+                  <span class="tag">Company Visit</span>
+                  <span class="tag">Networking</span>
+                </div>
+                <h3>FinTech Company Visit</h3>
+                <p>
+                  Visiting a local fintech company, learning about their tech
+                  stack, and hearing how engineers build real-time trading
+                  systems.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://github.com/shu-ping-d" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lunatu2000" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:luna.work404@gmail.com" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <div class="footer-inner">
+        <p><span id="year"></span> Luna. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="./scripts/weather.js"></script>
+  </body>
+</html>

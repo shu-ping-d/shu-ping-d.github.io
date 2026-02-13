@@ -404,16 +404,8 @@ body {
 /* Contact  */
 
 .contact-title {
-  text-align: center;
   font-size: 2rem;
   margin: 0 0 0.4rem;
-}
-
-.contact-subtitle {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 2.2rem;
-  color: var(--muted);
 }
 
 #contact .container {
@@ -622,6 +614,326 @@ footer {
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .section {
+    padding: 3.25rem 0;
+  }
+}
+
+/* Manchester Life page */
+
+/* hero */
+
+.life-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.4fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.life-hero-text h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.2rem;
+}
+
+.life-hero-text p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.life-hero-photo img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+}
+
+/* cooking + weather layout */
+
+.life-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.life-grid h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.life-intro {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.life-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
+
+.life-photo-card {
+  margin: 0;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(213, 232, 184, 0.8);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+
+.life-photo-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.life-photo-card figcaption {
+  padding: 0.7rem 0.9rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* 讓 cooking 的 grid 稍微密一點，方便放多張 (最多 20 張) */
+.cooking-grid .life-photo-card img {
+  height: 150px;
+}
+
+/* Weather panel */
+
+.weather-panel {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid rgba(213, 232, 184, 0.9);
+  padding: 1.6rem 1.7rem 1.8rem;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.06);
+}
+
+.weather-panel h2 {
+  margin: 0 0 0.6rem;
+}
+
+.weather-subtitle {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.weather-today {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(107, 203, 119, 0.12),
+    rgba(255, 217, 61, 0.12)
+  );
+}
+
+.weather-today-main {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.weather-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.weather-today-temp {
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.weather-today-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.weather-today-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+.weather-week {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.6rem;
+}
+
+.weather-day {
+  border-radius: 14px;
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+  background: #f4ffe9;
+  font-size: 0.8rem;
+}
+
+.weather-day-name {
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.weather-day-temp {
+  margin-top: 0.2rem;
+}
+
+/* Activities on Manchester page */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.4rem;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  color: #444;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.activity-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.3em;
+  color: #262626;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.tag-group {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #777;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+/* Footer */
+
+.social-icons a {
+  font-size: 1.3em;
+  margin-left: 15px;
+  color: #555;
+}
+
+.social-icons a:hover {
+  color: black;
+}
+
+footer {
+  background: #f4ffe9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  padding: 1.25rem 0 1.75rem;
+  border-top: 1px solid rgba(213, 232, 184, 0.9);
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .nav a {
+    margin-left: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    margin-top: 1.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-meta {
+    text-align: left;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #contact .container {
+    max-width: 100%;
+  }
+
+  .life-hero,
+  .life-layout {
     grid-template-columns: 1fr;
   }
 }
